@@ -1,0 +1,152 @@
+.navbar {
+  /* sticky é o comportamento padrão — não precisa de prop */
+  position: sticky;
+  top: 0;
+  align-self: stretch;
+  background-color: var(--branco);
+  border-bottom: var(--border-1);
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: var(--padding-12) var(--padding-32) var(--padding-11);
+  gap: var(--gap-20);
+  max-width: 100%;
+  z-index: 10;
+  font-size: var(--fs-20);
+  color: var(--preto);
+  font-family: var(--font-montserrat);
+  text-align: left;
+}
+
+/* ── Logo ─────────────────────────────────────────── */
+.logoEJuriki {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  gap: var(--gap-10);
+  font-size: var(--fs-25);
+}
+
+.logo {
+  width: 61px;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.logoTexto {
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.juriki {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.slogan {
+  font-size: var(--fs-14);
+  color: var(--azul);
+}
+
+/* ── Links de nav ─────────────────────────────────── */
+.abas {
+  height: var(--height-29);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-60);
+  min-width: 250px;
+  max-width: 100%;
+}
+
+.link,
+.linkAtivo {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.linkAtivo {
+  cursor: pointer;
+}
+
+.linkAtivo:hover {
+  color: var(--azul);
+  text-decoration: underline;
+}
+
+/* ── Perfil ───────────────────────────────────────── */
+.perfil {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  min-width: 250px;
+  max-width: 339px;
+}
+
+.profileIcons {
+  height: var(--height-29);
+  width: 31px;
+  position: relative;
+  cursor: pointer;
+}
+
+.profileIcons2 {
+  height: var(--height-29);
+  width: var(--width-26);
+  position: relative;
+  cursor: pointer;
+}
+
+.divisor {
+  height: var(--height-24);
+  width: var(--width-1);
+  background-color: var(--color-gainsboro);
+}
+
+.avatar {
+  height: 42px;
+  width: 42px;
+  border-radius: var(--br-50);
+  cursor: pointer;
+}
+
+.nomeUsuario {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.setaUsuario {
+  height: var(--height-11);
+  width: var(--width-20);
+  cursor: pointer;
+}
+
+/* ── Responsivo ───────────────────────────────────── */
+@media screen and (max-width: 1325px) {
+  .slogan {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .abas {
+    gap: var(--gap-30);
+  }
+}

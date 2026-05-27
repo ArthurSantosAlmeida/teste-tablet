@@ -1,0 +1,36 @@
+.botaoPlanos {
+  align-self: stretch;
+  height: 47px;
+  background-color: var(--branco);
+  border-radius: var(--br-10);
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--padding-16);
+  gap: var(--gap-15);
+  cursor: pointer;
+  font-family: var(--font-montserrat);
+  /* MODIFICADO: Combinada a animação de fundo com a de tamanho */
+  transition: background-color 0.2s, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.botaoPlanos:hover {
+  background-color: var(--color-gainsboro);
+}
+
+/* ADICIONADO: Efeito de encolher ao pressionar */
+.botaoPlanos:active {
+  transform: scale(0.96);
+}
+
+.iconPlano {
+  width: 18px;
+  height: auto;
+}
+
+.textoBotao {
+  font-size: var(--fs-14);
+  color: var(--preto);
+  font-weight: 500;
+}

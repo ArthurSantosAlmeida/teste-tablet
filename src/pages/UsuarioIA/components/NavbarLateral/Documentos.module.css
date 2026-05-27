@@ -1,0 +1,36 @@
+.botaoDocumentos {
+  align-self: stretch;
+  height: 47px;
+  background-color: var(--branco);
+  border-radius: var(--br-10);
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--padding-16);
+  gap: var(--gap-15);
+  cursor: pointer;
+  font-family: var(--font-montserrat);
+  /* MODIFICADO: Adicionada a transição do transform para o clique ficar fluido */
+  transition: filter 0.2s, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.botaoDocumentos:hover {
+  filter: brightness(0.95);
+}
+
+/* ADICIONADO: Efeito de encolher ao pressionar */
+.botaoDocumentos:active {
+  transform: scale(0.96);
+}
+
+.iconDocumento {
+  width: 13px;
+  height: auto;
+}
+
+.textoBotao {
+  font-size: var(--fs-14);
+  color: var(--preto);
+  font-weight: 500;
+}

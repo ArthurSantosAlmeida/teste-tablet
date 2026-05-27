@@ -1,0 +1,61 @@
+.navbarLateral {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: var(--padding-24) var(--padding-24);
+  box-sizing: border-box;
+  gap: var(--gap-30);
+  background-color: transparent;
+  font-family: var(--font-montserrat);
+}
+
+.containerLargura {
+  display: flex;
+  flex-direction: column;
+}
+
+.abasIa {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10);
+}
+
+.histricoDeChat {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Aumentado para dar mais distância entre o título e os itens */
+  color: var(--azul-sereno);
+  align-items: flex-start; /* Alinha o bloco do histórico à esquerda */
+  width: 100%;
+}
+
+.textoConversasRecentes {
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Força o alinhamento do texto à esquerda */
+  width: 100%;
+}
+
+.conversasRecentesTitulo {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 11px;
+}
+
+.listaConversas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-8);
+  width: 100%;
+  align-items: flex-start; /* Força os componentes filhos a alinharem à esquerda */
+}
+
+@media screen and (max-width: 450px) {
+  .navbarLateral {
+    width: 100%;
+    gap: var(--gap-15);
+  }
+}

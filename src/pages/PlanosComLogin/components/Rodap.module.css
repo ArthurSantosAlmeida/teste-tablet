@@ -1,0 +1,141 @@
+.rodap {
+  align-self: stretch;
+  background-color: var(--azul);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-30) var(--padding-40) var(--padding-12);
+  gap: var(--gap-29);
+  z-index: 7;
+  flex-shrink: 0;
+  font-size: var(--fs-14);
+  color: var(--branco);
+  font-family: var(--font-montserrat);
+  text-align: left;
+}
+
+/* ── Área principal ───────────────────────────────── */
+.conteudo {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  row-gap: var(--gap-20);
+}
+
+/* ── Logo + redes sociais ─────────────────────────── */
+.logoERedesSociais {
+  width: 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: var(--fs-20);
+  text-align: center;
+}
+
+.logoEJuriki {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+}
+
+.logoIcon {
+  width: 42px;         /* Escolha a largura que preferir aqui */
+  height: auto;        /* Faz o cálculo proporcional automático */
+  object-fit: contain; /* Garante que os pixels fiquem perfeitamente contidos */
+}
+
+.juriki {
+  margin: 0;
+  height: 46px;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slogan {
+  margin: 0;
+  font-size: var(--fs-14);
+}
+
+.redesSociais {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-12);
+}
+
+.iconeSocial {
+  width: var(--width-24);
+  max-height: 100%;
+}
+
+/* ── Colunas de links ─────────────────────────────── */
+.colunaLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-10);
+}
+
+.tituloColuna {
+  margin: 0;
+  font-weight: 600;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.listaLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5);
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.textoContato {
+  cursor: auto; 
+}
+
+/* ── Rodapé de direitos ───────────────────────────── */
+.direitos {
+  margin: 0;
+  align-self: stretch;
+  text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .conteudo {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .juriki {
+    font-size: var(--fs-16);
+  }
+}
+
+.linkSocial {
+  display: inline-flex;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.linkSocial:hover {
+  transform: scale(1.1); /* Dá um leve zoom no ícone */
+  opacity: 0.8;          /* Deixa o ícone levemente transparente */
+}

@@ -1,0 +1,38 @@
+.resumoDaConta {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-40);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-25);
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+}
+
+.resumoDaConta2 {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.conjuntoDeResumo {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap-30) 46.5px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .resumoDaConta    { gap: var(--gap-20); }
+  .conjuntoDeResumo { gap: 23px; }
+}
+
+@media screen and (max-width: 450px) {
+  .resumoDaConta2 { font-size: var(--fs-20); }
+}

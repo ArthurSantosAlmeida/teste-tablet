@@ -1,0 +1,207 @@
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-28);
+  padding: var(--padding-28_5) var(--padding-19);
+  box-sizing: border-box;
+
+  background-color: var(--branco);
+  border: var(--border-1);
+  border-radius: var(--br-15);
+  box-shadow: var(--shadow-drop);
+  overflow: hidden;
+
+  min-width: var(--min-w-180);
+  max-width: var(--max-w-360);
+
+  font-size: var(--fs-14);
+  font-family: var(--font-montserrat);
+  color: var(--preto);
+  text-align: left;
+  list-style: none;
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+/* Card em destaque (ex: plano intermediário) */
+.destaque {
+  border-color: var(--amarelo);
+  border-width: 2px;
+  transform: scale(1);
+}
+
+/* Card com features em 2 colunas (planos enterprise) */
+.duasColunas {
+  min-width: var(--min-w-370);
+  max-width: 100%;
+}
+
+/* ── Cabeçalho ────────────────────────────────────── */
+.cabecalho {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-10);
+  font-size: var(--fs-35);
+  overflow: hidden;
+}
+
+.iconeContainer {
+  flex-shrink: 0;
+  height: var(--height-72_4);
+  width: var(--width-76);
+  border-radius: var(--br-30);
+  background-color: var(--areia);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone {
+  width: 43.9px;
+  max-height: 100%;
+  object-fit: contain; /* era cover */
+}
+
+.infoPlano {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-3);
+  overflow: hidden;
+}
+
+.nomeEDescricao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-3);
+  padding: var(--padding-0) var(--padding-15);
+}
+
+.nome {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.descricao {
+  margin: 0;
+  font-size: var(--fs-20);
+  font-weight: 600;
+  color: var(--color-gray);
+  font-family: inherit;
+}
+
+/* ── Preço ────────────────────────────────────────── */
+.preco {
+  display: flex;
+  align-items: flex-end;
+  height: var(--height-60);
+  overflow: hidden;
+}
+
+.cifrao {
+  font-size: var(--fs-20);
+  font-weight: 600;
+  padding: var(--padding-18) var(--padding-3);
+  align-self: center;
+}
+
+.valor {
+  font-size: var(--fs-35);
+  font-weight: 700;
+  padding: var(--padding-10) var(--padding-6);
+}
+
+.periodo {
+  font-size: var(--fs-20);
+  font-weight: 600;
+  color: var(--color-gray);
+  padding-bottom: var(--padding-4);
+  align-self: flex-end;
+}
+
+/* ── Divisor ──────────────────────────────────────── */
+.divisor {
+  align-self: stretch;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* ── Features ─────────────────────────────────────── */
+.features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.duasColunas .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-10) var(--gap-42);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-7);
+  height: var(--height-17);
+}
+
+.checkIcon {
+  height: var(--height-11);
+  width: var(--width-11);
+  flex-shrink: 0;
+}
+
+/* ── Responsivo ───────────────────────────────────── */
+@media screen and (max-width: 750px) {
+  .cabecalho {
+    flex-wrap: wrap;
+  }
+
+  .nome,
+  .valor {
+    font-size: var(--fs-28);
+  }
+
+  .duasColunas .features {
+    grid-template-columns: 1fr;
+    gap: var(--gap-10);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    padding: var(--padding-20);
+  }
+
+  .iconeContainer {
+    width: var(--width-calc100-40);
+  }
+
+  .nome {
+    font-size: var(--fs-21);
+  }
+
+  .descricao,
+  .cifrao,
+  .periodo {
+    font-size: var(--fs-16);
+  }
+
+  .valor {
+    font-size: var(--fs-21);
+  }
+}

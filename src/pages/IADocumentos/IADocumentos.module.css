@@ -1,0 +1,71 @@
+.iaDocumentos {
+  width: 100%;
+  position: relative;
+  background-color: var(--branco);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-48) var(--padding-30) var(--padding-50);
+  gap: 44px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Área de upload por arraste ── */
+.uploadArea {
+  width: 100%;
+  max-width: var(--max-w-1293);
+  background-color: var(--branco);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--br-15);
+  border: var(--border-2);
+  padding: 32px var(--padding-30);
+  gap: 9px;
+  text-align: left;
+  font-size: var(--fs-16);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.uploadArea:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.uploadIcone {
+  width: 94px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.uploadTitulo {
+  margin: 0;
+  font-weight: 600;
+}
+
+.uploadSubtitulo {
+  margin: 0;
+  font-size: var(--fs-14);
+}
+
+.uploadFormatos {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+/* ── Responsivo ── */
+@media screen and (max-width: 1300px) {
+  .uploadArea { max-width: 100%; }
+}
+
+@media screen and (max-width: 800px) {
+  .iaDocumentos { gap: var(--gap-22); }
+}

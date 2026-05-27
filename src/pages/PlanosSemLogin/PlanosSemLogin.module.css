@@ -1,0 +1,156 @@
+.planos {
+  width: 100%;
+  position: relative;
+  background-color: var(--areia);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  isolation: isolate;
+  gap: 105px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Decorações de fundo ──────────────────────────── */
+.decoracaoFundoTopo {
+  position: absolute;
+  width: 2042px;
+  height: 1395px;
+  object-fit: cover;
+  margin: 0 !important;
+  top: calc(50% - 732px);
+  left: calc(50% - 940px);
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.decoracaoLateralDireita {
+  position: absolute;
+  margin: 0 !important;
+  width: 168px;
+  top: 135px;
+  left: 0;
+  z-index: 2;
+  max-height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.decoracaoLateralEsquerda {
+  position: absolute;
+  margin: 0 !important;
+  width: 193px;
+  top: 136px;
+  right: 0;
+  z-index: 3;
+  max-height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.decoracaoBaseEsquerda {
+  position: absolute;
+  margin: 0 !important;
+  width: 193px;
+  height: 387px;
+  top: calc(50% + 105px);
+  left: 0;
+  z-index: 4;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.decoracaoBaseDireita {
+  position: absolute;
+  margin: 0 !important;
+  width: 168px;
+  right: -7px;
+  bottom: 242px;
+  z-index: 5;
+  max-height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Conteúdo principal ───────────────────────────── */
+.conteudo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  gap: 64px;
+  max-width: 1227.9px;
+  z-index: 7;
+  flex-shrink: 0;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.hero {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-10) var(--padding-30);
+  gap: var(--gap-5);
+  font-size: 40px;
+  color: var(--preto);
+  font-family: var(--font-montserrat);
+  text-align: center;
+}
+
+.tituloHero {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.destaque {
+  color: var(--amarelo);
+}
+
+.subtituloHero {
+  margin: 0;
+  font-size: var(--fs-20);
+  font-weight: 600;
+}
+
+/* ── Responsivo ───────────────────────────────────── */
+@media screen and (max-width: 1225px) {
+  .conteudo {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .planos {
+    gap: 52px;
+  }
+  .conteudo {
+    gap: 32px;
+  }
+  .tituloHero {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .planos {
+    gap: 26px;
+  }
+  .conteudo {
+    gap: var(--gap-16);
+  }
+  .tituloHero {
+    font-size: var(--fs-24);
+  }
+  .subtituloHero {
+    font-size: var(--fs-16);
+  }
+}

@@ -1,0 +1,89 @@
+.pessoal {
+  align-self: stretch;
+  border-radius: var(--br-30);
+  border: var(--border-1);
+  display: flex;
+  align-items: center;
+  padding: var(--padding-30);
+  gap: 61px;
+  text-align: left;
+  font-size: var(--fs-30);
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+}
+.fotoIcon {
+  height: 216px;
+  width: 216px;
+  position: relative;
+  object-fit: cover;
+}
+.informacoesGerais {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-18);
+}
+.aliceSilva {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.informaes {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-12);
+  font-size: var(--fs-14);
+  color: var(--color-black);
+}
+.alicesilvagmailcom {
+  align-self: stretch;
+  position: relative;
+  color: var(--azul-escuro);
+}
+.telefoneUsuario {
+  width: 138px;
+  height: var(--height-24);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.solarphoneOutlineIcon {
+  height: var(--height-24);
+  width: var(--width-24);
+  position: relative;
+}
+.memberInfo {
+  position: relative;
+}
+.calendarioMembro {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-0) var(--padding-4) var(--padding-0) var(--padding-0);
+  gap: var(--gap-14);
+}
+@media screen and (max-width: 800px) {
+  .pessoal {
+    gap: var(--gap-30);
+    flex-wrap: wrap;
+  }
+  .fotoIcon,
+  .informacoesGerais {
+    flex: 1;
+  }
+  .aliceSilva {
+    font-size: var(--fs-24);
+  }
+}
+@media screen and (max-width: 450px) {
+  .pessoal {
+    gap: var(--gap-15);
+  }
+  .aliceSilva {
+    font-size: var(--fs-18);
+  }
+}

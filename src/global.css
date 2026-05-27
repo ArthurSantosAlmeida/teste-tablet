@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: normal;
+  font-family: var(--font-montserrat);
+  background-color: var(--areia);
+  color: var(--preto);
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  /* ==========================================================================
+     1. PALETA DE CORES (Base Oficial JURIKI + Adicionais Acumuladas)
+     ========================================================================== */
+  /* Cores Principais (global1) */
+  --amarelo: #fab84c;
+  --areia: #f4ead8;
+  --azul: #102e44;
+  --azul-sereno: #3d6a8a;
+  --branco: #fff;
+  --color-gainsboro: rgba(217, 217, 217, 0.5);
+  --color-goldenrod: #fdcd5d;
+  --color-whitesmoke: #f0f0f0;
+  --preto: #020202;
+
+  /* Cores Extras (global2 & global.css) */
+  --azul-escuro: #0c1822;
+  --branco-no-absoluto: #f4ead8;
+  --color-black: #000;
+  --color-darkgray: #beadad;
+  --color-firebrick: #c83c3c;
+  --color-gainsboro-100: #d9d9d9;
+  --color-gainsboro-200: rgba(217, 217, 217, 0.5);
+  --color-gray: rgba(2, 2, 2, 0.8);
+  --color-gray-100: rgba(0, 0, 0, 0.6);
+  --color-gray-200: rgba(0, 0, 0, 0.5);
+  --color-steelblue: rgba(61, 106, 138, 0.4);
+
+  /* ==========================================================================
+     2. ESPAÇAMENTOS (GAPS)
+     ========================================================================== */
+  --gap-0: 0px;
+  --gap-2: 2px;
+  --gap-3: 3px;
+  --gap-4: 4px;
+  --gap-5: 5px;
+  --gap-6: 6px;
+  --gap-7: 7px;
+  --gap-8: 8px;
+  --gap-10: 10px;
+  --gap-12: 12px;
+  --gap-14: 14px;
+  --gap-15: 15px;
+  --gap-16: 16px;
+  --gap-17: 17px;
+  --gap-18: 18px;
+  --gap-19: 19px;
+  --gap-20: 20px;
+  --gap-21: 21px;
+  --gap-22: 22px;
+  --gap-23: 23px;
+  --gap-25: 25px;
+  --gap-28: 28px;
+  --gap-29: 29px;
+  --gap-30: 30px;
+  --gap-36: 36px;
+  --gap-40: 40px;
+  --gap-42: 42px;
+  --gap-60: 60px;
+  --gap-100: 100px;
+
+  /* ==========================================================================
+     3. PADDINGS
+     ========================================================================== */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-2: 2px;
+  --padding-3: 3px;
+  --padding-4: 4px;
+  --padding-5: 5px;
+  --padding-6: 6px;
+  --padding-10: 10px;
+  --padding-11: 11px;
+  --padding-12: 12px;
+  --padding-15: 15px;
+  --padding-16: 16px;
+  --padding-17: 17px;
+  --padding-18: 18px;
+  --padding-19: 19px;
+  --padding-20: 20px;
+  --padding-22: 22px;
+  --padding-24: 24px;
+  --padding-25: 25px;
+  --padding-26: 26px;
+  --padding-30: 30px;
+  --padding-32: 32px;
+  --padding-39: 39px;
+  --padding-40: 40px;
+  --padding-48: 48px;
+  --padding-50: 50px;
+  --padding-122: 122px;
+  --padding-123: 123px;
+  --padding-28_5: 28.5px;
+  --padding-3_6: 3.6px;
+
+  /* ==========================================================================
+     4. TIPOGRAFIA E FONTES
+     ========================================================================== */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-21: 21px;
+  --fs-24: 24px;
+  --fs-25: 25px;
+  --fs-28: 28px;
+  --fs-30: 30px;
+  --fs-35: 35px;
+
+  /* ==========================================================================
+     5. ARREDONDAMENTO (BORDER-RADIUS)
+     ========================================================================== */
+  --br-9: 9px;
+  --br-10: 10px;
+  --br-15: 15px;
+  --br-16: 16px;
+  --br-30: 30px;
+  --br-32: 32px;
+  --br-50: 50%;
+  --br-360: 360px;
+
+  /* ==========================================================================
+     6. BORDAS, SOMBRAS E GRADIENTES
+     ========================================================================== */
+  /* Base Prioritária (global1) */
+  --border-1: 1px solid rgba(217, 217, 217, 0.5);
+
+  /* Variantes resolvidas de global2 e global.css */
+  --border-1-whitesmoke: 1px solid var(--color-whitesmoke);
+  --border-2-darkgray: 1px solid var(--color-darkgray);
+  --border-2-amarelo: 1px solid var(--amarelo);
+  --border-3: 1px solid var(--color-steelblue);
+
+  /* Efeitos visuais extraídos de global.css */
+  --shadow-drop: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  --gradient-1: linear-gradient(90deg, var(--azul), #35698e);
+
+  /* ==========================================================================
+     7. LARGURAS E ALTURAS (DIMENSÕES ACUMULADAS)
+     ========================================================================== */
+  /* Alturas (Heights) */
+  --height-1: 1px;
+  --height-11: 11px;
+  --height-12: 12px;
+  --height-15: 15px;
+  --height-17: 17px;
+  --height-19: 19px;
+  --height-20: 20px;
+  --height-24: 24px;
+  --height-29: 29px;
+  --height-30: 30px;
+  --height-36: 36px;
+  --height-38: 38px;
+  --height-40: 40px;
+  --height-47: 47px;
+  --height-50: 50px;
+  --height-59: 59px;
+  --height-60: 60px;
+  --height-63: 63px;
+  --height-80: 80px;
+  --height-101: 101px;
+  --height-412: 412px;
+  --height-19_5: 19.5px;
+  --height-5_8: 5.8px;
+  --height-72_4: 72.4px;
+
+  /* Larguras (Widths) */
+  --width-1: 1px;
+  --width-11: 11px;
+  --width-15: 15px;
+  --width-18: 18px;
+  --width-20: 20px;
+  --width-22: 22px;
+  --width-24: 24px;
+  --width-26: 26px;
+  --width-30: 30px;
+  --width-36: 36px;
+  --width-38: 38px;
+  --width-40: 40px;
+  --width-59: 59px;
+  --width-60: 60px;
+  --width-62: 62px;
+  --width-76: 76px;
+  --width-256: 256px;
+  --width-306: 306px;
+  --width-19_5: 19.5px;
+  --width-7_5: 7.5px;
+  --width-calc100-40: calc(100% - 40px);
+
+  /* Limites de Layout (Min/Max Widths) */
+  --max-w-334: 334px;
+  --max-w-360: 360px;
+  --max-w-1293: 1293px;
+  --min-w-180: 180px;
+  --min-w-310: 310px;
+  --min-w-316: 316px;
+  --min-w-370: 370px;
+
+  /* ==========================================================================
+     8. DESLOCAMENTOS E COORDENADAS (OFFSETS ABSOLUTOS)
+     ========================================================================== */
+  /* Coordenadas Left */
+  --left-0: 0px;
+  --left--0_05: -0.05px;
+  --left--0_73: -0.73px;
+  --left--0_95: -0.95px;
+  --left-0_15: 0.15px;
+  --left-0_75: 0.75px;
+  --left-0_97: 0.97px;
+  --left-13: 13px;
+  --left-1_65: 1.65px;
+  --left-1_85: 1.85px;
+
+  /* Coordenadas Top */
+  --top-0: 0px;
+  --top-2: 2px;
+  --top-3: 3px;
+  --top-4: 4px;
+  --top-12: 12px;
+  --top-12_8: 12.8px;
+  --top-0_01: 0.01px;
+  --top-2_9: 2.9px;
+  --top-2_91: 2.91px;
+}

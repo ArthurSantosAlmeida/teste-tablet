@@ -1,0 +1,194 @@
+.wrapper {
+  width: 100%;
+  font-family: var(--font-montserrat, "Montserrat", sans-serif);
+}
+
+/* ── Botão gatilho ── */
+.gatilho {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 5px 13px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.gatilho:hover {
+  border-color: #f5c842;
+  color: #555;
+}
+
+/* Estado ativo: tem instrução definida */
+.gatilhoAtivo {
+  background: #fff8ee;
+  border-color: #f5c842;
+  color: #b8860b;
+}
+
+.iconeFmt {
+  font-size: 11px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: #f5c842;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.seta {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.setaAberta {
+  transform: rotate(180deg);
+}
+
+/* ── Painel expansível ── */
+.painel {
+  margin-top: 10px;
+  background: #fafafa;
+  border: 1.5px solid #eeeeee;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.descricao {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* ── Textarea ── */
+.campoWrapper {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 10px 12px 26px 12px; /* espaço para o contador */
+  resize: none;
+  box-sizing: border-box;
+  line-height: 1.55;
+  transition: border-color 0.18s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #f5c842;
+}
+
+.textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.contador {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 11px;
+  color: #bbb;
+}
+
+.contadorAlerta {
+  color: #e07000;
+  font-weight: 600;
+}
+
+/* ── Exemplos rápidos (chips) ── */
+.exemplos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rotuloExemplos {
+  font-size: 11px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.listaExemplos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  font-family: inherit;
+  font-size: 12px;
+  color: #666;
+  background: #fff;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 4px 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.chip:hover {
+  border-color: #f5c842;
+  color: #333;
+}
+
+.chipAtivo {
+  background: #fff8ee;
+  border-color: #f5c842;
+  color: #b8860b;
+  font-weight: 600;
+}
+
+/* ── Botão limpar ── */
+.botaoLimpar {
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 12px;
+  color: #e07000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.botaoLimpar:hover {
+  opacity: 1;
+}

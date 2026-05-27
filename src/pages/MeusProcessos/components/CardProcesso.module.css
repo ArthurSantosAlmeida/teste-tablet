@@ -1,0 +1,217 @@
+.card {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+
+  border-radius: var(--br-30);
+  border: var(--border-1);
+  overflow: hidden;
+
+  font-size: var(--fs-25);
+  color: var(--color-darkgreen-100);
+  font-family: var(--font-montserrat);
+  text-align: left;
+}
+
+/* ── Corpo ────────────────────────────────────────── */
+.corpo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-20) var(--padding-30);
+  gap: var(--gap-15);
+  box-sizing: border-box;
+}
+
+/* Linha 1: badge + título */
+.cabecalho {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: var(--gap-20);
+}
+
+.badgeCategoria {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  border-radius: var(--br-30);
+  padding: var(--padding-5) var(--padding-10);
+  box-sizing: border-box;
+  font-size: var(--fs-20);
+  font-weight: 400;
+  /* backgroundColor e color vêm como inline style */
+}
+
+.titulo {
+  margin: 0;
+  font-size: var(--fs-24);
+  font-weight: 700;
+  color: var(--azul-escuro);
+  font-family: inherit;
+}
+
+/* Linha 2: informes + status */
+.detalhes {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--gap-20);
+  font-size: var(--fs-20);
+  color: var(--color-black);
+}
+
+.informes {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-10);
+  min-width: 300px;
+}
+
+.informes li {
+  font-size: var(--fs-16);
+  font-weight: 400;
+  font-family: var(--font-montserrat);
+}
+
+.statusArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 206px;
+  color: var(--color-seagreen-100);
+}
+
+.badgeStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  flex: 1;
+  border-radius: var(--br-30);
+  background-color: var(--color-seagreen-200);
+  padding: var(--padding-5) var(--padding-10);
+  font-size: var(--fs-16);
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+}
+
+.iconeMenu {
+  height: var(--height-24);
+  width: var(--width-24);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Barra de ações ───────────────────────────────── */
+.acoes {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: var(--fs-20);
+}
+
+.acao {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-9);
+  padding: var(--padding-12) var(--padding-10);
+  box-sizing: border-box;
+  min-width: 165px;
+  border: none;
+  border-top: var(--border-1);
+  background: none;
+  font-size: var(--fs-16); 
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  cursor: pointer;
+}
+
+.acao:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Primeira ação: borda inferior esquerda arredondada */
+.acao:first-child {
+  border-radius: var(--br-0) var(--br-0) var(--br-0) var(--br-30);
+}
+
+/* Ações 2 e 3: borda esquerda separadora */
+.acao:not(:first-child) {
+  border-left: var(--border-1);
+}
+
+/* Variante primária: cor padrão azul */
+.acao_primaria {
+  color: var(--azul);
+}
+
+/* Variante perigo: vermelho */
+.acao_perigo {
+  color: var(--color-firebrick);
+}
+
+/* Variante secundária: cor padrão */
+.acao_secundaria {
+  color: var(--azul);
+}
+
+.acaoIcone {
+  height: 22px;
+  width: 22px;
+}
+
+/* ── Responsivo ───────────────────────────────────── */
+@media screen and (max-width: 1325px) {
+  .corpo {
+    padding-right: 33px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .corpo {
+    gap: var(--gap-15);
+  }
+
+  .titulo {
+    font-size: var(--fs-24);
+  }
+
+  .informes {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .badgeCategoria {
+    font-size: var(--fs-20);
+  }
+
+  .titulo {
+    font-size: var(--fs-18);
+  }
+
+  .informes li {
+    font-size: var(--fs-16);
+  }
+
+  .acao {
+    flex-wrap: wrap;
+    font-size: var(--fs-16);
+  }
+}

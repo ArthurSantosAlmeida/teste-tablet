@@ -1,0 +1,155 @@
+.recentDocumentsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 39px;
+  max-width: var(--max-w-1293);
+  text-align: left;
+  font-size: var(--fs-30);
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+}
+
+/* ── Cabeçalho "Documentos recentes / Ver todos" ── */
+.cabecalho {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: var(--gap-20);
+  max-width: 100%;
+}
+
+.titulo {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  max-width: 100%;
+}
+
+.verTodos {
+  height: var(--height-24);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-4);
+  font-size: var(--fs-15);
+  color: var(--azul-sereno);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.setinha {
+  height: var(--height-24);
+  width: var(--width-24);
+  transform: scaleX(-1);
+}
+
+/* ── Lista de documentos ── */
+.listaDocumentos {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-20);
+  color: var(--azul-escuro);
+}
+
+/*
+  Todos os itens compartilham a mesma base.
+  As bordas laterais são sempre visíveis; top/bottom são gerenciadas
+  via :first-child / :last-child para evitar bordas duplas.
+*/
+.documentoItem {
+  align-self: stretch;
+  height: 79px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-15) var(--padding-40);
+  border-right: 1px solid var(--color-steelblue);
+  border-left:  1px solid var(--color-steelblue);
+  cursor: pointer;
+}
+
+.documentoItem:hover {
+  background: #F0F0F0;
+}
+
+.documentoItem:first-child {
+  border-top: 1px solid var(--color-steelblue);
+  border-radius: var(--br-10) var(--br-10) 0 0;
+}
+
+.documentoItem:last-child {
+  border-bottom: 1px solid var(--color-steelblue);
+  border-radius: 0 0 var(--br-10) var(--br-10);
+}
+
+/* Item único na lista */
+.documentoItem:only-child {
+  border: 1px solid var(--color-steelblue);
+  border-radius: var(--br-10);
+}
+
+/* ── Conteúdo interno do item ── */
+.documentoInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-17);
+}
+
+.documentoIcone {
+  height: var(--height-40);
+  width: var(--width-36);
+  border-radius: var(--br-10);
+  flex-shrink: 0;
+}
+
+.documentoTexto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.documentoNome {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.documentoMeta {
+  align-self: stretch;
+  height: var(--height-24);
+  font-size: var(--fs-14);
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+}
+
+.menuIcone {
+  height: var(--height-24);
+  width: var(--width-24);
+  flex-shrink: 0;
+}
+
+/* ── Responsivo ── */
+@media screen and (max-width: 1300px) {
+  .recentDocumentsSection { max-width: 100%; }
+}
+
+@media screen and (max-width: 800px) {
+  .recentDocumentsSection { gap: var(--gap-19); }
+  .cabecalho              { flex-wrap: wrap; }
+  .titulo                 { font-size: var(--fs-24); }
+}
+
+@media screen and (max-width: 450px) {
+  .titulo        { font-size: var(--fs-18); }
+  .documentoNome { font-size: var(--fs-16); }
+}

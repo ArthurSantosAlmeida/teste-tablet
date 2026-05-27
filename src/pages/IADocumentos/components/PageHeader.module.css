@@ -1,0 +1,159 @@
+.pageHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-2);
+  box-sizing: border-box;
+  gap: var(--gap-40);
+  max-width: var(--max-w-1293);
+  text-align: left;
+  font-size: var(--fs-15);
+  color: var(--azul-sereno);
+  font-family: var(--font-montserrat);
+}
+
+/* ── Link "Voltar" ── */
+.linkVoltar {
+  height: var(--height-24);
+  width: 70px;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-4);
+  cursor: pointer;
+}
+
+.setinha {
+  height: var(--height-24);
+  width: var(--width-24);
+  position: relative;
+  object-fit: contain;
+}
+
+/* ── Bloco principal (título + ações) ── */
+.conteudo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-100);
+  max-width: 100%;
+  font-size: 35px;
+  color: var(--azul);
+}
+
+.titulos {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-12);
+}
+
+.titulo {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.subtitulo {
+  margin: 0;
+  align-self: stretch;
+  font-size: var(--fs-20);
+  font-weight: 400;
+}
+
+/* ── Linha de ações (busca + botões) ── */
+.acoes {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24.3px;
+  max-width: 100%;
+  font-size: var(--fs-15);
+  color: var(--azul-escuro);
+}
+
+.campoBusca {
+  flex: 1;
+  min-width: 235px;
+  height: var(--height-50);
+  border-radius: var(--br-10);
+  border: var(--border-2);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-5) var(--padding-20);
+  color: var(--color-gray-200);
+  font-weight: 600;
+  cursor: text;
+}
+
+.lupaIcone {
+  height: 28px;
+  width: var(--width-40);
+}
+
+.inputBusca {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--fs-15);
+  font-weight: 600;
+  color: var(--color-gray-200);
+  width: 100%;
+  font-family: var(--font-montserrat);
+}
+
+/* Estilo base compartilhado por todos os botões de ação */
+.botaoAcao {
+  height: var(--height-50);
+  width: 210px;
+  border-radius: var(--br-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-10);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botaoAcao:hover {
+  filter: brightness(0.95);
+}
+
+.botaoAcao:active {
+  transform: scale(0.98);
+}
+
+.botaoAcao img {
+  height: var(--height-30);
+  width: var(--width-30);
+}
+
+/* Variantes de cor */
+.amarelo { background-color: var(--amarelo); }
+.sereno  { width: 200px; background-color: var(--azul-sereno); color: var(--areia); }
+
+/* ── Responsivo ── */
+@media screen and (max-width: 1300px) {
+  .pageHeader { max-width: 100%; }
+}
+
+@media screen and (max-width: 800px) {
+  .pageHeader { gap: var(--gap-20); }
+  .conteudo   { gap: 50px; }
+  .titulo     { font-size: var(--fs-28); }
+}
+
+@media screen and (max-width: 450px) {
+  .conteudo   { gap: 25px; }
+  .titulo     { font-size: 21px; }
+  .subtitulo  { font-size: var(--fs-16); }
+  .campoBusca { flex-wrap: wrap; }
+}

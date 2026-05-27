@@ -1,0 +1,117 @@
+.cabecalho {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: var(--border-1);
+  gap: var(--gap-40);
+  font-size: 35px;
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+  text-align: left;
+}
+
+/* ── Título ───────────────────────────────────────── */
+.titulo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-12);
+}
+
+.paginaTitulo {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.paginaSubtitulo {
+  margin: 0;
+  align-self: stretch;
+  font-size: var(--fs-20);
+  font-weight: 400;
+  color: var(--preto);
+  font-family: inherit;
+}
+
+/* ── Filtros (abas) ───────────────────────────────── */
+.filtros {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-16); /* era var(--fs-20) */
+  gap: var(--gap-20);
+}
+
+.filtro,
+.filtroAtivo {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-9);
+  height: 44px;
+  padding: var(--padding-8) var(--padding-10);
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  font-size: inherit;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: var(--azul);
+  cursor: pointer;
+  padding: var(--padding-8);
+}
+
+/* Aba ativa: borda amarela embaixo */
+.filtroAtivo {
+  border-bottom: 3px solid var(--amarelo);
+}
+
+.filtro:hover {
+  opacity: 0.7;
+}
+
+.filtroIcone {
+  height: 28px;  /* era var(--height-40) */
+  width: 28px;
+}
+
+/* Badge de contagem — só aparece na aba ativa */
+.filtroBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width-20);
+  border-radius: var(--br-10);
+  background-color: var(--color-khaki);
+  font-size: inherit;
+  font-weight: 600;
+}
+
+/* ── Responsivo ───────────────────────────────────── */
+@media screen and (max-width: 800px) {
+  .cabecalho {
+    gap: var(--gap-20);
+  }
+
+  .paginaTitulo {
+    font-size: var(--fs-28);
+  }
+
+  .filtros {
+    gap: var(--gap-20);
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .paginaTitulo {
+    font-size: 21px;
+  }
+
+  .paginaSubtitulo,
+  .filtroLabel {
+    font-size: var(--fs-16);
+  }
+}

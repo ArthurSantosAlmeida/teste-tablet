@@ -1,0 +1,55 @@
+.botoSugesto {
+  border-radius: var(--br-16);
+  background-color: var(--branco);
+  border: 1px solid var(--color-gainsboro);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-16) var(--padding-20);
+  cursor: pointer;
+  /* MODIFICADO: Ajustado o tempo do transform para 0.1s para responder rápido ao clique */
+  transition: transform 0.1s ease, box-shadow 0.2s;
+  width: 100%;
+}
+
+.botoSugesto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ADICIONADO: Remove o translateY do hover e aplica o scale de clique físico */
+.botoSugesto:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.contedoSugesto {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-15);
+  width: 100%;
+}
+
+.iconeCard {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+.textoCard {
+  margin: 0;
+  font-size: var(--fs-14);
+  font-weight: 500;
+  color: var(--preto);
+  font-family: var(--font-montserrat);
+  text-align: left;
+  flex: 1;
+}
+
+.setaIndicadora {
+  height: 12px;
+  width: 7px;
+  object-fit: contain;
+}

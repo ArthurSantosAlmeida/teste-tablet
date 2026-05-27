@@ -1,0 +1,18 @@
+.botoSecundario {
+  width: 149px;
+  border-radius: var(--br-10);
+  border: 2px solid var(--branco);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-10);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--branco);
+  font-family: var(--font-inter);
+}
+.boto2 {
+  position: relative;
+}

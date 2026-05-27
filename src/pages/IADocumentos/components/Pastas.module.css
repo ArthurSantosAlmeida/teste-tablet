@@ -1,0 +1,128 @@
+.pastas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-2) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  gap: var(--gap-36);
+  max-width: var(--max-w-1293);
+  text-align: left;
+  font-size: var(--fs-30);
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+}
+
+/* ── Cabeçalho "Pastas / Ver todos" ── */
+.cabecalho {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: var(--gap-20);
+}
+
+.titulo {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.verTodos {
+  height: var(--height-24);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-4);
+  font-size: var(--fs-15);
+  color: var(--azul-sereno);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.setinha {
+  height: var(--height-24);
+  width: var(--width-24);
+  transform: scaleX(-1);
+}
+
+/* ── Grade de pastas ── */
+.listaPastas {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: var(--gap-20);
+  font-size: var(--fs-20);
+}
+
+/* Card de pasta — estilo único para todas as pastas */
+.pastaCard {
+  height: var(--height-101);
+  border-radius: var(--br-10);
+  background-color: var(--branco);
+  border: var(--border-2);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-20) var(--padding-50);
+  gap: var(--gap-10);
+  cursor: pointer;
+}
+
+.pastaCard:hover {
+  filter: brightness(0.95);
+}
+
+.pastaCard:active {
+  transform: scale(0.98);
+}
+
+.folderIcone {
+  height: var(--height-59);
+  width: var(--width-59);
+  object-fit: cover;
+}
+
+.pastaTexto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 100px;
+}
+
+.pastaNome {
+  margin: 0;
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.pastaContagem {
+  align-self: stretch;
+  font-size: var(--fs-15);
+  font-weight: 600;
+  color: var(--color-gray-100);
+}
+
+/* ── Responsivo ── */
+@media screen and (max-width: 1300px) {
+  .pastas     { max-width: 100%; }
+  .listaPastas { justify-content: center; }
+}
+
+@media screen and (max-width: 800px) {
+  .pastas  { gap: var(--gap-18); }
+  .titulo  { font-size: var(--fs-24); }
+}
+
+@media screen and (max-width: 450px) {
+  .cabecalho { flex-wrap: wrap; }
+  .titulo    { font-size: var(--fs-18); }
+  .pastaCard { padding-left: var(--padding-20); padding-right: var(--padding-20); }
+  .pastaNome { font-size: var(--fs-16); }
+}

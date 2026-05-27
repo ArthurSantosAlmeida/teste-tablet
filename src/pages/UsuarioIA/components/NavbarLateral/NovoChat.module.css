@@ -1,0 +1,34 @@
+.botaoNovoChat {
+  align-self: stretch;
+  height: 47px;
+  background-color: var(--amarelo);
+  border-radius: var(--br-10);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-15);
+  cursor: pointer;
+  padding: 0 var(--padding-16);
+  font-family: var(--font-montserrat);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.botaoNovoChat:hover {
+  filter: brightness(0.95);
+}
+
+.botaoNovoChat:active {
+  transform: scale(0.98);
+}
+
+.iconPlus {
+  height: 15px;
+  width: 15px;
+}
+
+.textoBotao {
+  font-size: var(--fs-14);
+  font-weight: 500;
+  color: var(--preto);
+}

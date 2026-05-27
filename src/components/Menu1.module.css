@@ -1,0 +1,153 @@
+.menu {
+  align-self: stretch;
+  background-color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px var(--padding-40);
+  box-sizing: border-box;
+  gap: var(--gap-4);
+  max-width: 100%;
+  font-family: var(--font-montserrat);
+  border-bottom: 1px solid var(--color-gainsboro);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoIcon {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+
+.marcaNome {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--preto);
+}
+
+.navegacaoAbas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex: 1;
+  max-width: 832px;
+}
+
+.linkMenu {
+  background: none;
+  border: 1px solid transparent;
+  font-size: var(--fs-16);
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--preto);
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.linkMenu:hover {
+  border-color: var(--color-gainsboro);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.linkMenu:active {
+  transform: scale(0.96);
+}
+
+.linkMenuAtivo {
+  background-color: #FFFDF0;
+  color: var(--preto);
+}
+
+.perfilUsuarioArea {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-20);
+}
+
+.iconNotificacao { 
+  width: 24px; 
+  height: 22px; 
+}
+
+.iconConfig { 
+  width: 20px; 
+  height: 22px; 
+}
+
+.divisorVertical {
+  height: 24px;
+  width: 1px;
+  background-color: var(--color-gainsboro);
+}
+
+.infoUsuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.infoUsuario:hover {
+  border-color: var(--color-gainsboro);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.infoUsuario:active {
+  transform: scale(0.96);
+}
+
+.botaoAcaoIcon {
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.botaoAcaoIcon:hover {
+  border-color: var(--color-gainsboro);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.botaoAcaoIcon:active {
+  transform: scale(0.96);
+}
+
+.nomeUsuario {
+  font-size: var(--fs-14);
+  font-weight: 600;
+  color: var(--preto);
+  margin: 0;
+}
+
+.avatarFoto {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}

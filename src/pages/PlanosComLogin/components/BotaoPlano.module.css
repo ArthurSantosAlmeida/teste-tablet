@@ -1,0 +1,41 @@
+.botao {
+  align-self: stretch;
+  height: var(--height-36);
+  border-radius: var(--br-9);
+  border: var(--border-2);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6) var(--padding-20);
+  font-size: var(--fs-14);
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.botao:hover {
+  opacity: 0.85;
+}
+
+/* Variante padrão: borda escura, fundo branco */
+.assinar {
+  background-color: var(--branco);
+  color: var(--preto);
+  border-color: var(--amarelo);
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.assinar:hover{
+  background-color: var(--amarelo);
+  opacity: 1;
+}
+
+/* Variante enterprise: fundo escuro, texto branco */
+.vendas {
+  background-color: var(--azul);
+  color: var(--branco);
+  border-color: var(--azul);
+}

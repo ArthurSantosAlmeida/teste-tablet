@@ -1,0 +1,123 @@
+.navbar {
+  align-self: stretch;
+  background: var(--gradient-1); /* Cor original em degradê mantida */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px var(--padding-40); /* Padding idêntico ao Menu1 */
+  box-sizing: border-box;
+  gap: var(--gap-4);
+  max-width: 100%;
+  font-family: var(--font-montserrat);
+  color: var(--branco);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoIcon {
+  width: 50px; /* Tamanho da imagem idêntico ao Menu1 */
+  height: auto;
+  object-fit: cover;
+}
+
+.marcaNome {
+  margin: 0;
+  font-size: 22px; /* Fonte idêntica ao Menu1 */
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.navegacaoAbas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px; /* Espaçamento idêntico ao Menu1 */
+  flex: 1;
+  max-width: 832px;
+}
+
+.linkMenu {
+  background: none;
+  border: 1px solid transparent;
+  font-size: var(--fs-16);
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--branco);
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.linkMenu:hover {
+  border-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.linkMenu:active {
+  transform: scale(0.96);
+}
+
+.linkDesabilitado {
+  opacity: 0.5;
+}
+
+.botoesArea {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espaçamento equilibrado entre os botões */
+}
+
+/* ── Base Estrutural dos Botões (Idêntica ao Menu1) ── */
+.botaoSecundario,
+.botaoPrincipal {
+  background: none;
+  border: 1px solid transparent;
+  font-size: var(--fs-16);      /* Tamanho de fonte do Menu1 */
+  font-weight: 600;             /* Peso de fonte do Menu1 */
+  font-family: inherit;
+  padding: 10px 24px;           /* Altura e largura proporcional do Menu1 */
+  border-radius: 8px;           /* Arredondamento do Menu1 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;     /* Transição suave do Menu1 */
+}
+
+/* Feedback de clique dinâmico idêntico ao Menu1 */
+.botaoSecundario:active,
+.botaoPrincipal:active {
+  transform: scale(0.96);
+}
+
+/* ── Preservação das Cores Originais da Navbar ── */
+
+/* Botão "Entrar" (Borda Branca / Transparente) */
+.botaoSecundario {
+  border-color: var(--branco, #ffffff);
+  color: var(--branco, #ffffff);
+}
+
+.botaoSecundario:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão "Criar Conta" (Fundo Amarelo/Laranja do Projeto) */
+.botaoPrincipal {
+  background-color: #ffb03a; /* Cor sólida extraída da imagem original */
+  color: #000000;            /* Texto escuro para garantir contraste e leitura */
+}
+
+.botaoPrincipal:hover {
+  filter: brightness(0.92);  /* Feedback sutil de hover sem alterar a matiz da cor */
+}

@@ -1,0 +1,128 @@
+.assinaturaEPlanos {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-25);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-25);
+  color: var(--azul);
+  font-family: var(--font-montserrat);
+}
+.assinaturaEPlanos2 {
+  margin: 0;
+  width: 1244px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.coroa,
+.juncaBtn {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.juncaBtn {
+  align-self: stretch;
+  border-radius: var(--br-30);
+  border: var(--border-1);
+  justify-content: space-between;
+  padding: var(--padding-19);
+  gap: var(--gap-0);
+  row-gap: var(--gap-20);
+  font-size: var(--fs-15);
+}
+.coroa {
+  flex: 1;
+  padding: var(--padding-0) var(--padding-3);
+  gap: 24.9px;
+  min-width: 413px;
+}
+.iconeCoroa {
+  width: var(--width-60);
+  position: relative;
+  border-radius: var(--br-360);
+  max-height: 100%;
+  object-fit: cover;
+}
+.planoGratuito {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5);
+  min-width: var(--min-w-310);
+  max-width: 100%;
+}
+.planoGratuito2 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--fs-20);
+  font-weight: 600;
+  font-family: inherit;
+}
+.vocPossuAcesso {
+  position: relative;
+  color: var(--azul-escuro);
+  display: inline-block;
+  max-width: 100%;
+}
+.risco {
+  width: 153.1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  color: var(--azul-sereno);
+}
+.verDetalhesDo {
+  position: relative;
+  text-decoration: underline;
+  display: inline-block;
+  min-width: 164px;
+  flex-shrink: 0;
+}
+.btnVerPlanos {
+  height: 50px;
+  width: 220px;
+  border-radius: var(--br-10);
+  background-color: var(--amarelo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul-escuro);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s ease;
+}
+
+.btnVerPlanos:hover {
+  filter: brightness(0.95);
+}
+
+.btnVerPlanos:active {
+  transform: scale(0.96);
+}
+
+.verPlanosGratuitos {
+  position: relative;
+  font-weight: 600;
+}
+@media screen and (max-width: 450px) {
+  .assinaturaEPlanos2 {
+    font-size: var(--fs-20);
+  }
+  .coroa {
+    min-width: 100%;
+  }
+  .planoGratuito2 {
+    font-size: var(--fs-16);
+  }
+}

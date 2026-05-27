@@ -1,0 +1,50 @@
+.pagina {
+  width: 100%;
+  position: relative;
+  background-color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-20);
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.conteudo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 45px;
+  padding: var(--padding-40) var(--padding-40);
+  box-sizing: border-box;
+  max-width: 1292px;
+}
+
+.listaProcessos {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 45px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1325px) {
+  .conteudo {
+    padding-top: var(--padding-26);
+    padding-bottom: var(--padding-26);
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .conteudo {
+    padding: var(--padding-20);
+    gap: var(--gap-22);
+  }
+
+  .listaProcessos {
+    gap: var(--gap-22);
+  }
+}
