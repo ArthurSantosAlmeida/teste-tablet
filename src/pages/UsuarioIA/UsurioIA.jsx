@@ -10,7 +10,7 @@ import styles from "./UsurioIA.module.css";
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
 
-const N8N_WEBHOOK_URL = "/webhook/juriki-chat";
+const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL;
 
 const FORMATOS = [
   {
